@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Light.woff2") format("woff2"), url("../fonts/Rubik-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.woff2") format("woff2"), url("../fonts/Rubik-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2"), url("../fonts/Rubik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Bold.woff2") format("woff2"), url("../fonts/Rubik-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/ArialMT.woff2") format("woff2"), url("../fonts/ArialMT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial-BoldMT.woff2") format("woff2"), url("../fonts/Arial-BoldMT.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mart-Fat";
+  src: url("../fonts/Mart-Fat.woff2") format("woff2"), url("../fonts/Mart-Fat.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik";
+  overflow-x: hidden;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 0;
+  color: black;
+}
+
+.page-width {
+  max-width: 1500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+@media only screen and (max-width: 1600px) {
+  .page-width {
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .page-width {
+    max-width: 90%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+svg, button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.dis-flex {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Mart-Fat";
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+}
+
+.head {
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 10;
+}
+
+.head-nav {
+  display: flex;
+  margin-left: auto;
+  height: 100%;
+}
+.head-nav a {
+  color: white;
+  font-family: "Arial";
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-left: 75px;
+  position: relative;
+}
+@media only screen and (max-width: 1600px) {
+  .head-nav a {
+    margin-left: 50px;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .head-nav a {
+    margin-left: 40px;
+  }
+}
+.head-nav a.active-page .red-line, .head-nav a:hover .red-line {
+  height: 5px;
+}
+.head-nav a.active-page {
+  font-weight: bold;
+}
+
+.red-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: #FF0000;
+  transition: all 0.5s;
+}
+
+.first {
+  position: relative;
+  height: 700px;
+}
+@media only screen and (max-width: 1400px) {
+  .first {
+    height: 600px;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.next {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.headline {
+  position: absolute;
+  top: 100px;
+  z-index: 2;
+  width: 35%;
+}
+@media only screen and (max-width: 1400px) {
+  .headline {
+    top: 50px;
+    width: 50%;
+  }
+}
+.headline p {
+  font-size: 25px;
+  color: #fff;
+  margin-top: 25px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  z-index: 3;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  display: none;
+}
+.dropdown-content a {
+  margin: 0;
+  display: block;
+  color: black;
+  font-family: "Arial";
+  font-size: 16px;
+  padding: 15px;
+  transition: all 0.5s;
+}
+.dropdown-content a:hover {
+  color: #FF0000;
+}
+
+.sections:hover .dropdown-content {
+  display: flex;
+}/*# sourceMappingURL=main.css.map */
